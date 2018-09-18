@@ -1,6 +1,5 @@
 # Homework01 in STAT545 by vetlebh
 
-<<<<<<< HEAD
 Hi and welcome to this repository. Here you can find vetlebh's Homework01 in STAT545 - Exploratory Data analysis. Feel free to hang around, and help yourself to a cold drink in the [fridge.](Figs/Fridge.jpg)
 
 
@@ -12,7 +11,7 @@ I am a 24 year old boy from Norway, who decided to take a year abroad to experie
 * The two countries are different sizes
 	* Canada is bigger!
 
-Apart from spotting differences, I enjoy skiing and climbing (which, I have to admit, did influence my choice of exchange university). To showcase my markdown skills, and also keeping up with the "about me" topic, here is a list of likes and dislikes:
+Apart from spotting differences, I enjoy skiing and climbing (which, I have to admit, did influence my choice of applying to UBC). To showcase my markdown skills, and also keeping up with the "about me" topic, here is a list of likes and dislikes:
 
 Likes | Dislikes
 ----------|----------
@@ -22,6 +21,7 @@ Backflips | Broken necks
 Python 3.7 | Not snow on Christmas
 Beer | Being hangover
 
+Now, let me show you this picture of me, while at the same time demonstrating both *italic* AND **bold**:
+![Picture of me](Figs/Me.jpg)
 
-=======
 
