@@ -1,0 +1,54 @@
+---
+title: "Swiss dataset Exploration"
+author: "Vetle Birkeland Huglen"
+date: "18 9 2018"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+In this part of the homework I will briefly explore the "swiss" dataset in R, which shows a handful of socio-economic indicators, along with fertility rate, for all French-speaking provinces of Switzerland. The statistics are from about 1888. Firstly, let us take a quick look at the format of the dataset:
+
+```{r}
+head(swiss)
+```
+
+It could also be useful to look at some summary statistics.
+
+```{r}
+summary(swiss)
+str(swiss)
+```
+ Now, I wanna look further into the "fertility" feature.
+ 
+```{r}
+fertility = swiss$Fertility
+mean(fertility)
+max(fertility)
+min(fertility)
+sd(fertility)
+var(fertility)
+```
+ 
+I wanna sort the provinces by fertilityrate, but I am only interested in the Fertility and Catholic features:
+
+```{r}
+rownames_to_column(swiss, var = "rowname") %>%
+  select(rowname, Fertility, Catholic) %>%
+    arrange(desc(Fertility))
+```
+
+Now, I notice that the provinces with highest Fertility also has quite high value of Catholic. Lets do a quick linear regression and see what we get!
+
+```{r}
+fit = lm(Fertility ~ Catholic, data=swiss)
+summary(fit)
+plot(swiss$Catholic, swiss$Fertility)
+abline(fit)
+```
+This plot indicates a small rise in Fertility as function of Catholic. This is, however, a very bad linear regression. As seen in the plot, most of the variance in Fertility is left unexplained by the Catholic feature. Regardless, the low p-value shows that there with high probability exists some correlation between the two features.
+
+This was a very shallow exploration of the swiss dataset, but it highlights some of the possibilities R possesses.
