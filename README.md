@@ -22,6 +22,6 @@ Python 3.7 | Not snow on Christmas
 Beer | Being hangover
 
 Now, let me show you this picture of me, while at the same time demonstrating both *italic* AND **bold**:
-![Picture of me](Figs/Me.jpg)
+![Picture of me](Figs/me.jpg)
 
 
